@@ -1,6 +1,6 @@
 # 작은 수 제거하기
 
-def solution(arr):
+solution(arr):
     if len(arr) > 1:
         arr.remove(min(arr)
         return arr
@@ -41,7 +41,7 @@ def solution(arr):
  return [i for i in mylist if i > min(mylist)]
   
   
-  def solution(arr):
+solution(arr):
     arr.remove(min(arr))
 
     if len(arr)!=0: 
