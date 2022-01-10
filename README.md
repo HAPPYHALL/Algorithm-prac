@@ -41,4 +41,13 @@ def solution(arr):
  return [i for i in mylist if i > min(mylist)]
   
   
+  def solution(arr):
+    arr.remove(min(arr))
+
+    if len(arr)!=0: 
+       answer = arr
+    else: 
+       answer = [-1]
+    return answer
+  
   
