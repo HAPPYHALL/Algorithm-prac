@@ -14,7 +14,7 @@
 놀이기구의 이용 횟수 count : 1 ≤ count ≤ 2,500, count는 자연수
 
 
-
+<해설 1>
 def solution(price, money, count):
     res = 0                #총 필요한 놀이기구의 이용 금액
     for i in range(1,count+1):
@@ -26,3 +26,21 @@ def solution(price, money, count):
 
 
     return answer
+    
+    
+ <해설2>  
+  
+#1 놀이기구 총 이용료 계산 :
+price*1 + price*2 + price*3 + .. + price*count = price(1+2+3+..+count) = price*((count*(count+1))/2)
+
+#2 놀이기구 총 이용료와 현재 가지고 있는 금액과 대소 비교 통해서 return값 결정하기 :
+현재 가지고 있는 금액이 부족하면 return 부족한 금액, 충분하면 return 0
+
+
+def solution(price, money, count) :
+	
+    #1 놀이기구 이용료 계산
+    price *= (count * (count+1)/2)
+	
+    #2 return 부족한 금액 or 0
+    return price - money if price >= money else 0
